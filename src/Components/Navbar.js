@@ -19,18 +19,20 @@ const Navigation = ({ theme, setTheme }) => {
       variant={theme}
       collapseOnSelect={true}
     >
-      <Container fluid>
+      <Container fluid >
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
           placement="start"
+          style={{background: `${theme === "dark" ? "#243447" : "white"}`,color: `${theme === "dark" ? "white" : "black"}`}}
         >
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title id="offcanvasNavbarLabel">Wave</Offcanvas.Title>
+            <Offcanvas.Title id="offcanvasNavbarLabel" >Wave</Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body>
-            <Nav className="justify-content-end flex-grow-1 pe-3">
+          <Offcanvas.Body style={{background: `${theme === "dark" ? "#243447" : "white"}`,color: `${theme === "dark" ? "white" : "black"}`}}>
+            <Nav className="justify-content-end flex-grow-1 pe-3" style={{background: `${theme === "dark" ? "#243447" : "white"}`,color: `${theme === "dark" ? "white" : "black"}`}}
+            >
               <Nav.Link href="#action2">
                 <Link style={{ textDecoration: "none" }} to="/home">
                   Home
